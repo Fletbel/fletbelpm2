@@ -1,5 +1,5 @@
-const post = require('./post.js');
+// const mongoose = require('mongoose');
 
-const myPost = post(0, "John", "Welcome", "10:00");
-
-console.log(myPost);
+// const post = require('./post.js');
+// console.log(post);
+// const myPost = post(0, "John", "Welcome", "10:00");

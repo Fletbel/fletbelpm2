@@ -2,14 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script type="text/javascript" src="./login.js"></script>
+  <script type="text/javascript" src="./post.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+
   <title>Document</title>
 </head>
+<link rel="stylesheet" href="./styles.css" />
 
 <body>
-
+  <span>
+    <input class="loginBtn" id="loginIDBtn" onclick="emptyBtn(this)" type="Add" class="button" value="아이디" />
+  </span>
+  <span>
+    <input class="loginBtn" id="loginPWBtn" onclick="emptyBtn(this)" type="Add" class="button" value="비밀번호" />
+  </span>
+  <span>
+    <button class="loginBtn" id="loginBtnBtn" onclick="handleLogin(loginIDBtn, loginPWBtn)"">
+      login
+    </button>
+  </span>
+  <div>
+    <span>
+      <button class=" postBtn" id="postBtnBtn" onclick="location.href='post.ejs'">
+      post
+    </button>
+  </span>
+  <span>
+    <button class="indexBtn" id="indexBtnBtn" onclick="location.href='index.ejs'">
+      index임시
+    </button>
+  </span>
+  </div>
+  <div></div>
 </body>
 
 </html>
