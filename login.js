@@ -20,6 +20,7 @@ function handleLogin(id, pwd) {
   // console.log(`typeof id: ${typeof id.value}`);
   // const thisid = document.getElementById('loginBtnBtn');
   // console.log(`thisid: ${thisid}`);
+
   if (!checkID(id.value)) {
     console.log("id error");
     return 0;

@@ -1,26 +1,36 @@
-// module.exports = function (index, author, data, time) {
-//   const post = {
-//     index: "number",
-//     author: "string",
-//     data: "string",
-//     time: "string"
-//   }
-//   post.index = index;
-//   post.author = author;
-//   post.data = data;
-//   post.time = time;
+const mongoose = require('mongoose');
 
-//   return post;
-// };
+const post = new post({
+  index: 1,
+  subject: "Welcome",
+  data: "Hello World",
+  author: "admin"
+});
+
+post.save(function (err, book) {
+  if (err) return console.log(err); //에러시 메시지출력
+  console.dir(post);
+});
+
+const Schema = mongoose.schema;
+const boardSchema = new Schema({
+  index: Number,
+  subject: String,
+  data: String,
+  author: String,
+  published_date: {
+    type: Date,
+    default: Date.now
+  }
+});
+
 
 function handlePost(subject, data) {
-  console.log(subject);
-  console.log(data.value);
-  if (validSubject) {
+  if (!validSubject) {
     console.log("subject error");
     return 0;
-  } else if (validData) {
-    console.log("password error");
+  } else if (!validData) {
+    console.log("data error");
     return 0;
   } else {
     console.log(`${subject.value}`);
@@ -41,3 +51,23 @@ function validSubject(subject) {
     return 0;
   }
 }
+
+module.exports = mongoose.model('post', boardSchema);
+
+
+
+
+// module.exports = function (index, author, data, time) {
+//   const post = {
+//     index: "number",
+//     author: "string",
+//     data: "string",
+//     time: "string"
+//   }
+//   post.index = index;
+//   post.author = author;
+//   post.data = data;
+//   post.time = time;
+
+//   return post;
+// };

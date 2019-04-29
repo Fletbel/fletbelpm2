@@ -1,5 +1,7 @@
 html,
 body {
+  justify-content: center;
+  align-items: center;
   background-color: white;
 }
 
@@ -21,4 +23,52 @@ h2 {
 
 .postData {
   width: 200px;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.postBtn {
+  width: 75px;
+}
+
+.indexBtn {
+  width: 75px;
+}
+
+.loginBtnBtn {
+  width: 75px;
+}
+
+.postSubject {
+  width: 400px;
+}
+
+.postData {
+  width: 400px;
+  height: 150px;
+}
+
+input[type="data"]::placeholder {
+  text-align: justify;
+}
+
+.postContainer {
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }

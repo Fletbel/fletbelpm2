@@ -14,28 +14,33 @@
 <link rel="stylesheet" href="./styles.css" />
 
 <body>
-  <span>
-    <input class="loginBtn" id="loginIDBtn" onclick="emptyBtn(this)" type="Add" class="button" value="아이디" />
-  </span>
-  <span>
-    <input class="loginBtn" id="loginPWBtn" onclick="emptyBtn(this)" type="Add" class="button" value="비밀번호" />
-  </span>
-  <span>
-    <button class="loginBtn" id="loginBtnBtn" onclick="handleLogin(loginIDBtn, loginPWBtn)"">
-      login
-    </button>
-  </span>
-  <div>
+  <div class="loginContainer">
     <span>
-      <button class=" postBtn" id="postBtnBtn" onclick="location.href='post.ejs'">
-      post
-    </button>
-  </span>
-  <span>
-    <button class="indexBtn" id="indexBtnBtn" onclick="location.href='index.ejs'">
-      index임시
-    </button>
-  </span>
+      <input class="loginBtn" id="loginIDBtn" placeholder="ID" onclick="emptyBtn(this)" type="text" class="button"
+        value="아이디" />
+    </span>
+    <span>
+      <input class="loginBtn" id="loginPWBtn" placeholder="PASSWORD" onclick="emptyBtn(this)" type="text" class="button"
+        value="비밀번호" />
+    </span>
+    <span>
+      <button class="loginBtn" id="loginBtnBtn" onclick="handleLogin(loginIDBtn, loginPWBtn)"">
+        login
+      </button>
+    </span>
+  </div>  
+  <br>
+  <div class=" btnContainer">
+        <span>
+          <button class="postBtn" id="postBtnBtn" onclick="location.href='post.ejs'">
+            post
+          </button>
+        </span>
+        <span>
+          <button class="indexBtn" id="indexBtnBtn" onclick="location.href='index.ejs'">
+            index
+          </button>
+        </span>
   </div>
   <div></div>
 </body>
